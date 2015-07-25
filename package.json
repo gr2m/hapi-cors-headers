@@ -1,0 +1,34 @@
+{
+  "name": "hapi-cors-headers",
+  "description": "hapi extension to enable CORS",
+  "main": "index.js",
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "standard && npm run -s test:node | tap-spec",
+    "test:coverage": "istanbul cover tests",
+    "test:coverage:upload": "istanbul-coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gr2m/hapi-cors-headers.git"
+  },
+  "keywords": [
+    "hapi",
+    "cors",
+    "extension"
+  ],
+  "author": "Gregor Martynus <gregor@martynus.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gr2m/hapi-cors-headers/issues"
+  },
+  "homepage": "https://github.com/gr2m/hapi-cors-headers#readme",
+  "devDependencies": {
+    "istanbul": "^0.3.17",
+    "istanbul-coveralls": "^1.0.3",
+    "semantic-release": "^4.0.0",
+    "standard": "^4.5.4",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.1"
+  }
+}
