@@ -6,7 +6,8 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "standard && npm run -s test:node | tap-spec",
     "test:coverage": "istanbul cover tests",
-    "test:coverage:upload": "istanbul-coveralls"
+    "test:coverage:upload": "istanbul-coveralls",
+    "test:node": "node tests"
   },
   "repository": {
     "type": "git",
