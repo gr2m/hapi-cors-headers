@@ -19,7 +19,7 @@ var corsHeaders = require('hapi-cors-headers')
 var server = new Hapi.Server()
 // setup routes etc ...
 
-server.ext('onPreResponse', addCorsHeaders)
+server.ext('onPreResponse', corsHeaders)
 ```
 
 ## Install
