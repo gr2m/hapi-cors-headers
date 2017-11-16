@@ -6,7 +6,7 @@
     "pretest": "standard",
     "coverage": "tap --coverage-report=html",
     "coverage:upload": "tap --coverage-report=text-lcov | coveralls",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "test": "tap --100 --coverage tests"
   },
   "repository": {
