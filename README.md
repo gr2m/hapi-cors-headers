@@ -34,3 +34,7 @@ npm install --save hapi-cors-headers
 ```bash
 npm test
 ```
+
+## License
+
+[MIT](LICENSE.md)
