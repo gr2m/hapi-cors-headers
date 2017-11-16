@@ -3,12 +3,11 @@
   "description": "hapi extension to enable CORS",
   "main": "index.js",
   "scripts": {
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "pretest": "standard",
-    "test": "npm run -s test:node | tap-spec",
-    "test:coverage": "istanbul cover tests",
-    "test:coverage:upload": "istanbul-coveralls",
-    "test:node": "node tests"
+    "coverage": "tap --coverage-report=html",
+    "coverage:upload": "tap --coverage-report=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "tap --100 --coverage tests"
   },
   "repository": {
     "type": "git",
@@ -26,11 +25,9 @@
   },
   "homepage": "https://github.com/gr2m/hapi-cors-headers#readme",
   "devDependencies": {
-    "istanbul": "^0.4.2",
-    "istanbul-coveralls": "^1.0.3",
-    "semantic-release": "^6.2.0",
-    "standard": "^8.0.0",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.1"
+    "coveralls": "^3.0.0",
+    "semantic-release": "^9.1.1",
+    "standard": "^10.0.3",
+    "tap": "^10.7.3"
   }
 }
