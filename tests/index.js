@@ -1,4 +1,4 @@
-var test = require('tape')
+var test = require('tap').test
 var corsHeaders = require('../index')
 
 test('request.headers.origin is undefined', function (t) {
