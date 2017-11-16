@@ -1,5 +1,7 @@
 # hapi-cors-headers
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/gr2m/hapi-cors-headers.svg)](https://greenkeeper.io/)
+
 > hapi extension to enable CORS
 
 [![NPM version](https://badge.fury.io/js/hapi-cors-headers.svg)](https://www.npmjs.com/package/hapi-cors-headers)
