@@ -28,6 +28,6 @@
     "coveralls": "^3.0.0",
     "semantic-release": "^9.1.1",
     "standard": "^10.0.3",
-    "tap": "^10.7.3"
+    "tap": "^11.0.0"
   }
 }
