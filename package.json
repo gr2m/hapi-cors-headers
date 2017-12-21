@@ -26,7 +26,7 @@
   "homepage": "https://github.com/gr2m/hapi-cors-headers#readme",
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "semantic-release": "^9.1.1",
+    "semantic-release": "^11.0.2",
     "standard": "^10.0.3",
     "tap": "^11.0.0"
   }
