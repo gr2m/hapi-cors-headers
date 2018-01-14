@@ -13,12 +13,10 @@ branches:
     - master
     - /^greenkeeper.*$/
 
+after_success: npm run coverage
+
 jobs:
   include:
     - stage: release
       node_js: lts/*
       script: npm run semantic-release
-    - node_js: lts/*
-      script: 
-      - npm run test
-      - npm run coverage
