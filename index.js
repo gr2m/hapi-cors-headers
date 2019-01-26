@@ -26,5 +26,5 @@ function addCorsHeaders (request, reply) {
     response.headers['access-control-allow-methods'] = request.headers['access-control-request-method']
   }
 
-  reply.continue
+  return reply.continue
 }
