@@ -2,6 +2,7 @@
   "name": "hapi-cors-headers",
   "description": "hapi extension to enable CORS",
   "main": "index.js",
+  "version": "2.0.0",
   "scripts": {
     "pretest": "standard",
     "coverage": "tap --coverage-report=html",

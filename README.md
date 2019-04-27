@@ -11,20 +11,46 @@ all server response, securely from all origins, with `access-control-allow-crede
 
 ## Example
 
+### Hapi v17
 ```js
-var Hapi = require('hapi')
-var corsHeaders = require('hapi-cors-headers')
+const Hapi = require('hapi');
+const corsHeaders = require('hapi-cors-headers');
 
-var server = new Hapi.Server()
+const server = Hapi.Server({ port: 3000 });
+
+const provision = async () => {
+    await server.register(corsHeaders);
+    ...
+    await server.start();
+};
+
+provision();
+```
+
+### Hapi v16
+
+```js
+const Hapi = require('hapi');
+const corsHeaders = require('hapi-cors-headers');
+
+const server = new Hapi.Server();
 // setup routes etc ...
 
-server.ext('onPreResponse', corsHeaders)
+server.ext('onPreResponse', corsHeaders);
 ```
 
 ## Install
 
+### Hapi v17
+
 ```bash
-npm install --save hapi-cors-headers
+npm install --save hapi-cors-headers@^2.x.x
+```
+
+### Hapi v16
+
+```bash
+npm install --save hapi-cors-headers@^1.x.x
 ```
 
 ## Test
