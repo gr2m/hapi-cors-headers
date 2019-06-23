@@ -2,7 +2,7 @@ module.exports = addCorsHeaders
 
 function addCorsHeaders (request, reply) {
   if (!request.headers.origin) {
-    return reply.continue()
+    return reply.continue
   }
 
   // depending on whether we have a boom or not,
@@ -12,7 +12,7 @@ function addCorsHeaders (request, reply) {
   response.headers['access-control-allow-origin'] = request.headers.origin
   response.headers['access-control-allow-credentials'] = 'true'
   if (request.method !== 'options') {
-    return reply.continue()
+    return reply.continue
   }
 
   response.statusCode = 200
@@ -26,5 +26,5 @@ function addCorsHeaders (request, reply) {
     response.headers['access-control-allow-methods'] = request.headers['access-control-request-method']
   }
 
-  reply.continue()
+  return reply.continue
 }
