@@ -11,12 +11,12 @@ function addCorsHeaders (request, reply) {
 
   response.headers['access-control-allow-origin'] = request.headers.origin
   response.headers['access-control-allow-credentials'] = 'true'
+  response.headers['access-control-expose-headers'] = 'content-type, content-length, etag'
   if (request.method !== 'options') {
     return reply.continue()
   }
 
   response.statusCode = 200
-  response.headers['access-control-expose-headers'] = 'content-type, content-length, etag'
   response.headers['access-control-max-age'] = 60 * 10 // 10 minutes
   // dynamically set allowed headers & method
   if (request.headers['access-control-request-headers']) {
